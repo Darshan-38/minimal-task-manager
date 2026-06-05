@@ -1,0 +1,235 @@
+/* ------------------------
+   RESET
+------------------------ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+    background:#f7f7f5;
+    color:#111;
+
+    min-height:100vh;
+}
+
+/* ------------------------
+   LAYOUT
+------------------------ */
+
+.app{
+    width:min(720px,90%);
+    margin:80px auto;
+}
+
+/* ------------------------
+   HEADER
+------------------------ */
+
+.header{
+    margin-bottom:40px;
+}
+
+.header h1{
+    font-size:2.6rem;
+    font-weight:700;
+    letter-spacing:-1.5px;
+    margin-bottom:8px;
+    
+}
+
+.header p{
+    color:#6b7280;
+    font-size:0.95rem;
+}
+
+/* ------------------------
+   INPUT
+------------------------ */
+
+.composer{
+    display:flex;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+#todo-input{
+    flex:1;
+
+    border:1px solid #e5e7eb;
+
+    background:white;
+
+    height:52px;
+
+    padding:0 16px;
+
+    font-size:15px;
+
+    border-radius:10px;
+
+    outline:none;
+
+    transition:.15s;
+}
+
+#todo-input:focus{
+    border-color:#111;
+}
+
+#add-btn{
+    background:#111;
+    color:white;
+
+    border:none;
+
+    padding:0 20px;
+
+    border-radius:10px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.15s;
+}
+
+#add-btn:hover{
+    opacity:.88;
+}
+
+/* ------------------------
+   TASK LIST
+------------------------ */
+
+#todo-list{
+    list-style:none;
+}
+
+/* ------------------------
+   TASK ITEM
+------------------------ */
+
+#todo-list li{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    background:white;
+
+    padding:16px 18px;
+
+    border:1px solid #ececec;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+    transition:.15s;
+}
+
+#todo-list li:hover{
+    border-color:#d1d5db;
+}
+
+/* ------------------------
+   CHECKBOX
+------------------------ */
+
+#todo-list input[type="checkbox"]{
+
+    width:18px;
+    height:18px;
+
+    cursor:pointer;
+
+    accent-color:#111;
+}
+
+/* ------------------------
+   TASK TEXT
+------------------------ */
+
+#todo-list span{
+
+    flex:1;
+
+    font-size:15px;
+
+    line-height:1.5;
+}
+
+/* ------------------------
+   DELETE
+------------------------ */
+
+#todo-list button{
+
+    border:none;
+
+    background:transparent;
+
+    color:#9ca3af;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    padding:4px 8px;
+
+    border-radius:6px;
+
+    transition:.15s;
+}
+
+#todo-list button:hover{
+
+    color:#dc2626;
+    background:#fef2f2;
+}
+
+/* ------------------------
+   COMPLETED
+------------------------ */
+
+.completed{
+
+    text-decoration:line-through;
+    opacity:.45;
+}
+
+/* ------------------------
+   MOBILE
+------------------------ */
+
+@media (max-width:640px){
+
+    .composer{
+        flex-direction:column;
+    }
+
+    #add-btn{
+        height:50px;
+    }
+
+    .app{
+        width:92%;
+        margin:40px auto;
+    }
+
+    .header h1{
+        font-size:2rem;
+    }
+}

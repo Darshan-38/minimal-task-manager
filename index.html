@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="header">
+            <h1>Tasks</h1>
+            <p>Keep track of what needs to get done.</p>
+        </header>
+
+        <section class="composer">
+
+            <input
+                type="text"
+                id="todo-input"
+                placeholder="Add a task..."
+            >
+
+            <button id="add-btn">
+                Add Task
+            </button>
+
+        </section>
+
+        <ul id="todo-list"></ul>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
